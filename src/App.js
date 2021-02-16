@@ -6,27 +6,9 @@ import SkillsPage from './components/pages/SkillsPage';
 import { Switch, Redirect, Route } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
 import ProjectsPage from './components/pages/ProjectsPage';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { Container } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
-  toolbar: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: theme.spacing(0, 1),
-    // necessary for content to be below app bar
-    ...theme.mixins.toolbar,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
-  },
-}))
-
 function App() {
-  const classes = useStyles();
-  const theme = useTheme();
   const matches = useMediaQuery('(min-width:492px)');
 
   return (
