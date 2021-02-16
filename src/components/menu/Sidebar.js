@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -16,10 +17,12 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import FolderIcon from '@material-ui/icons/Folder';
-import ReorderIcon from '@material-ui/icons/Reorder';
+import BuildIcon from '@material-ui/icons/Build';
 import HomeIcon from '@material-ui/icons/Home';
+import { NavLink } from 'react-router-dom';
 
-const drawerWidth = 240;
+
+const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -34,7 +37,6 @@ const useStyles = makeStyles((theme) => ({
         }),
     },
     appBarShift: {
-        backgroundColor: "#145c88",
         marginLeft: drawerWidth,
         width: `calc(100% - ${drawerWidth}px)`,
         transition: theme.transitions.create(['width', 'margin'], {
@@ -51,7 +53,6 @@ const useStyles = makeStyles((theme) => ({
     drawer: {
         width: drawerWidth,
         flexShrink: 0,
-        whiteSpace: 'nowrap',
     },
     drawerOpen: {
         width: drawerWidth,
@@ -83,9 +84,13 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         padding: theme.spacing(3),
     },
+    text: {
+        textDecoration: 'none',
+        color: '#312f2f'
+    },
 }));
 
-export default function MiniDrawer() {
+function Sidebar() {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -120,11 +125,12 @@ export default function MiniDrawer() {
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
-                        Portefolio
+                        Portfolio
                     </Typography>
                 </Toolbar>
             </AppBar>
             <Drawer
+                style={{ width: '200px' }}
                 variant="permanent"
                 className={clsx(classes.drawer, {
                     [classes.drawerOpen]: open,
@@ -144,21 +150,32 @@ export default function MiniDrawer() {
                 </div>
                 <Divider />
                 <List>
-                    <ListItem button key={'home'}>
-                        <ListItemIcon><HomeIcon /></ListItemIcon>
-                        <ListItemText primary={'Accueil'} />
-                    </ListItem>
-                    <ListItem button key={'projects'}>
-                        <ListItemIcon><FolderIcon /></ListItemIcon>
-                        <ListItemText primary={'Projets'} />
-                    </ListItem>
-                    <ListItem button key={'cv'}>
-                        <ListItemIcon><ReorderIcon /></ListItemIcon>
-                        <ListItemText primary={'CV'} />
-                    </ListItem>
+                    <NavLink to='/home' className={classes.text}>
+                        <ListItem button key={'home'}>
+                            <ListItemIcon><HomeIcon /></ListItemIcon>
+                            <ListItemText primary={'Accueil'} />
+                        </ListItem>
+                    </NavLink>
+                    <NavLink to='/projects' className={classes.text}>
+                        <ListItem button key={'projects'}>
+                            <ListItemIcon><FolderIcon /></ListItemIcon>
+                            <ListItemText primary={'Projets'} />
+                        </ListItem>
+                    </NavLink>
+                    <NavLink to='/skills' className={classes.text}>
+                        <ListItem button key={'cv'}>
+                            <ListItemIcon><BuildIcon /></ListItemIcon>
+                            <ListItemText primary={'Compétences'} />
+                        </ListItem>
+                    </NavLink>
                 </List>
                 <Divider />
             </Drawer>
+            <main className={classes.content}>
+                <div className={classes.toolbar} />
+            </main>
         </div>
     );
 }
+
+export default withRouter(Sidebar); 
