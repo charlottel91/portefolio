@@ -38,7 +38,7 @@ function Navbar() {
                 <NavLink to='/home'><HomeIcon className={classes.icon} />
                 </NavLink>} />
             <BottomNavigationAction value="skills" icon={
-                <NavLink to='/home'>
+                <NavLink to='/skills'>
                     <BuildIcon className={classes.icon} />
                 </NavLink>} />
         </BottomNavigation>
