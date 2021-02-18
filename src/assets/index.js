@@ -1,7 +1,7 @@
-import Introduce from './introduce/Intruduce'
-import Navbar from './navbar/Navbar'
-import Pdf from './pdf/Pdf'
-import Project from './projects/Project'
-import Resume from './resume/Resume'
+import Adoptamonster from './image/adoptamonster.png';
+import Juleetlily from './image/juleetlily.png';
+import Ohmyg from './image/ohmyg.png';
+import GithubIcon from './logo/github_icon.png';
+import Linkedin from './logo/linkedin_icon.png';
 
-export { Introduce, Navbar, Pdf, Project, Resume }
+export { Adoptamonster, Juleetlily, Ohmyg, GithubIcon, Linkedin }

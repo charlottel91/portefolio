@@ -10,7 +10,6 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
@@ -80,10 +79,10 @@ const useStyles = makeStyles((theme) => ({
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
     },
-    content: {
-        flexGrow: 1,
-        padding: theme.spacing(3),
-    },
+    // content: {
+    //     flexGrow: 1,
+    //     padding: theme.spacing(3),
+    // },
     text: {
         textDecoration: 'none',
         color: '#312f2f'
@@ -122,7 +121,7 @@ function Sidebar() {
                             [classes.hide]: open,
                         })}
                     >
-                        <MenuIcon />
+                        <ChevronRightIcon />
                     </IconButton>
                     <Typography variant="h6" noWrap>
                         Portfolio
@@ -171,9 +170,9 @@ function Sidebar() {
                 </List>
                 <Divider />
             </Drawer>
-            <main className={classes.content}>
+            {/* <main className={classes.content}>
                 <div className={classes.toolbar} />
-            </main>
+            </main> */}
         </div>
     );
 }

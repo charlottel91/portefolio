@@ -24,21 +24,23 @@ function Navbar() {
     const classes = useStyles();
     const [value, setValue] = React.useState('recents');
 
-    const handleChange = (event, newValue) => {
+    const handleChange = (newValue) => {
         setValue(newValue);
     };
 
     return (
         <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-            <NavLink to='/projects'>
-                <BottomNavigationAction value="projects" icon={<FolderIcon className={classes.icon} />} />
-            </NavLink>
-            <NavLink to='/home'>
-                <BottomNavigationAction value="home" icon={<HomeIcon className={classes.icon} />} />
-            </NavLink>
-            <NavLink to='/home'>
-                <BottomNavigationAction value="skills" icon={<BuildIcon className={classes.icon} />} />
-            </NavLink>
+            <BottomNavigationAction value="projects" icon={
+                <NavLink to='/projects'>
+                    <FolderIcon className={classes.icon} />
+                </NavLink>} />
+            <BottomNavigationAction value="home" icon={
+                <NavLink to='/home'><HomeIcon className={classes.icon} />
+                </NavLink>} />
+            <BottomNavigationAction value="skills" icon={
+                <NavLink to='/home'>
+                    <BuildIcon className={classes.icon} />
+                </NavLink>} />
         </BottomNavigation>
     );
 };

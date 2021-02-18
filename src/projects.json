@@ -1,30 +1,44 @@
 [
     {
         "title": "Oh my G !",
-        "background_color": "oh_my_g",
         "image": "ohmyg",
         "description": "Oh my G ! est une application développée pour aider les adolescents à calculer leur dose d'insuline. Nous sommes partis d'un constat simple: les applications médicales n'ont rien d'attrayant pour les jeunes. Donc nous avons rendu notre application non stigmatisante pour les jeunes par un design original; ce qui par la suite les entraîne à mieux se soigner.",
-        "link_github": "https://github.com/charlottel91/Paris-0919-P2-Diabete"
+        "tech": [
+            "ReactJS",
+            "Rest API"
+        ],
+        "github_link": "https://github.com/charlottel91/Paris-0919-P2-Diabete"
     },
     {
         "title": "Jule et Lily",
-        "background_color": "jule_et_lily",
         "image": "juleetlily",
-        "description": "Projet client qui avait pour but la refonte du back office du site e-commerce Jule et Lily avec la possibilité de gérer les stocks, les codes promos ainsi que l'affichage d'image sur le site et la liste des clients avec leur(s) facture(s). Lily, la fondatrice de la marque nous a laissé llibre choix sur le design et la conception du site.",
-        "link_github": "https://github.com/charlottel91/Paris-0919-P3-Jule-et-Lily"
+        "description": "Projet client qui avait pour but la refonte du back office du site e-commerce Jule et Lily. La cliente souhaitait avoir la possibilité de gérer les stocks, les codes promos ainsi que l'affichage d'image sur le site client et la liste des clients avec leur(s) facture(s). Lily, la fondatrice de la marque nous a laissé llibre choix sur le design et la conception du site.",
+        "tech": [
+            "ReactJS",
+            "Node.JS"
+        ],
+        "github_link": "https://github.com/charlottel91/Paris-0919-P3-Jule-et-Lily"
     },
     {
         "title": "Adopt a monster",
-        "background_color": "adopt_monster",
         "image": "adoptamonster",
-        "description": "Développé lors d'un hackaton sur le thème d'halloween, Adopt a monster a pour but de t'aider à trouver un monstre pour un soirée en tête à tête devant un film d'horreur. Alors viens vite matcher avec un monstre !",
-        "link_github": "https://github.com/Morgan-Leblanc/Adopte-un-monstre"
+        "description": "Développé lors d'un hackaton sur le thème d'halloween, Adopt a monster a pour but de t'aider à trouver un monstre pour une soirée en tête à tête devant un film d'horreur. Alors viens vite matcher avec un monstre !",
+        "tech": [
+            "ReactJS",
+            "Rest API"
+        ],
+        "github_link": "https://github.com/Morgan-Leblanc/Adopte-un-monstre"
     },
     {
         "title": "Ulysse",
-        "background_color": "adopt_monster",
-        "image": "adoptamonster",
-        "description": "",
-        "link_github": ""
+        "image": "",
+        "description": "Projet en cours de développement. Ulysse est une plateforme dédiée aux professeurs et à leurs élèves pour faciliter la gestion et la communication des cours. ",
+        "tech": [
+            "ReactJS",
+            "Typescript",
+            "Node.JS",
+            "MongoDB"
+        ],
+        "github_link": ""
     }
 ]

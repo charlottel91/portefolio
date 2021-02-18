@@ -4,13 +4,12 @@ import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import ohmyg from '../../assets/image/ohmyg.png'
-import juleetlily from '../../assets/image/juleetlily.png'
-import adoptamonster from '../../assets/image/adoptamonster.png'
+import { Adoptamonster, Juleetlily, Ohmyg } from '../../assets/index'
 
 const useStyles = makeStyles((theme) => ({
     actionArea: {
-        margin: 20,
+        marginBottom: 20,
+        marginTop: 20,
         transition: '0.2s',
         '&:hover': {
             transform: 'scale(1.1)',
@@ -47,7 +46,9 @@ export default function ProjectCard({ title, image }) {
                 />
                 <CardMedia
                     className={classes.media}
-                    image={image === 'ohmyg' ? ohmyg : (image === 'juleetlily' ? juleetlily : adoptamonster)}
+                    // component="img"
+                    alt="Projet en cours..."
+                    image={image === 'ohmyg' ? Ohmyg : (image === 'juleetlily' ? Juleetlily : (image === 'adoptamonster' ? Adoptamonster : "null"))}
                     title={title}
                 />
             </Card>
