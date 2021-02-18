@@ -26,6 +26,17 @@ const useStyles = makeStyles({
     },
     github: {
         textAlign: 'center',
+    },
+    technos: {
+        margin: 0,
+        padding: 0,
+        justifyContent: 'center',
+        listStyle: "none",
+        display: 'flex',
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        color: '#555351',
+        fontWeight: 'bold'
     }
 });
 
@@ -59,7 +70,11 @@ const ProjectModal = ({ open, handleClose, data }) => {
                         {data.description}
                     </DialogContentText>
                     <DialogContentText id="alert-dialog-slide-description" className={classes.text}>
-                        Technos utilisées: {data.tech.join(', ')}
+                        Technos utilisées:
+                        <ul className={classes.technos}>{data.tech.map(techno =>
+                        <li key={techno} style={{ backgroundColor: '#ffc010', borderRadius: 10, padding: 10, margin: 5 }}>{techno}</li>
+                    )}
+                        </ul>
                     </DialogContentText>
                     {data.github_link && <DialogContentText id="alert-dialog-slide-description" className={classes.github}>
                         <a target="_blank" href={data.github_link} rel='noreferrer'>
